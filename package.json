@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "game client/server",
   "homepage": "https://github.com/dr4fters/dr4ft",
+  "main": "scripts/run.js",
   "bugs": {
-    "url": "https://github.com/dr4fters/dr4ft/issues"
+    "url": "https://github.com/MunWolf/dr4ft/issues"
   },
   "license": "MIT",
   "author": "Dr4fters Team <zach@dr4ft.info>",
@@ -16,11 +17,15 @@
     {
       "name": "Hervé Huneau",
       "email": "herve.huneau@gmail.com"
+    },
+    {
+      "name": "Rikhardur Bjarni Einarsson",
+      "email": "badulf96@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dr4fters/dr4ft.git"
+    "url": "https://github.com/MunWolf/dr4ft.git"
   },
   "scripts": {
     "start": "node scripts/run",
@@ -32,7 +37,8 @@
     "test": "mocha --reporter spec --exit \"./{,!(node_modules)/**/}*.spec.js\"",
     "postinstall": " npm run download_allsets && webpack --config webpack.prod.js",
     "update_database": "node scripts/update_database",
-    "download_allsets": "node scripts/download_allsets"
+    "download_allsets": "node scripts/download_allsets",
+    "download_booster_rules": "node scripts/download_booster_rules"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -94,6 +100,7 @@
     "webpack-cli": "^3.3.11"
   },
   "engines": {
-    "node": "^12.8.0"
+    "node": "^12.8.0",
+    "npm": "*"
   }
 }
